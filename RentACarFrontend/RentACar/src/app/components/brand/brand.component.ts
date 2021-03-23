@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Brand } from 'src/app/Modules/brand';
+import { Brand } from 'src/app/Models/brand';
 
-import {brandResponseModel} from 'src/app/Modules/brandResponseModel';  
+import {brandResponseModel} from 'src/app/Models/brandResponseModel';  
 import { BrandService } from 'src/app/services/brand.service';
 
 @Component({

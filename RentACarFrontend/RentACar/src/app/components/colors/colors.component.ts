@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Colors} from 'src/app/Modules/colors';
+import { Colors} from 'src/app/Models/colors';
 import { ColorsService } from 'src/app/services/color.service';
-import {colorsResponseModel} from 'src/app/Modules/colorsResponseModel';  
+import {colorsResponseModel} from 'src/app/Models/colorsResponseModel';  
 
 @Component({
   selector: 'app-colors',
