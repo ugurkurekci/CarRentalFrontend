@@ -1,0 +1,28 @@
+<div *ngIf="dataLoaded==false" class="spinner-border text-primary" role="status">
+    <span class="visually-hidden"></span>
+  </div>
+
+<table *ngIf="dataLoaded==true" class="table table-sm table-dark">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">MARKA</th>
+            <th scope="col">İSİM</th>
+            <th scope="col">SOYİSİM</th>
+            <th scope="col">FİYAT</th>
+            <th scope="col">BAŞLANGIÇ</th>
+            <th scope="col">BİTİŞ</th>
+
+        </tr>
+    </thead>
+    <tr *ngFor="let details of rentalsdetails">
+          <td>{{details.id}}</td>
+          <td>{{details.brandName}}</td>
+          <td>{{details.firstName}}</td>
+          <td>{{details.lastName}}</td>
+          <td>{{details.dailyPrice}}</td>
+          <td>{{details.rentDate}}</td>
+          <td>{{details.returnDate}}</td>
+         
+    </tr>
+</table>
