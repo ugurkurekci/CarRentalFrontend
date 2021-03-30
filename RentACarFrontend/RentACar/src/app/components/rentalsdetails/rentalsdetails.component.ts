@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { rentalsDetails } from 'src/app/Models/rentalsDetails';
-import { RentalsDetailsService } from 'src/app/services/rentals-details.service';
+import { rentalsDetails } from 'src/app/Models/Dto/rentalsDetails';
+import { RentalsDetailsService } from 'src/app/services/rentals-service/rentals-details.service';
 
 @Component({
   selector: 'app-rentalsdetails',

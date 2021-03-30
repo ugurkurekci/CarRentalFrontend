@@ -1,18 +1,15 @@
-<div *ngIf="dataLoaded==false" class="spinner-border text-primary" role="status">
-    <span class="visually-hidden"></span>
-  </div>
+<div *ngIf="dataLoaded == false" class="spinner-border text-info" role="status">
+  <span class="visually-hidden"></span>
+</div>
 
-<table *ngIf="dataLoaded==true" class="table table-sm table-dark">
-    <thead class="thead-dark">
-        <tr>
-            <th scope="col">ID</th>
-            <th scope="col">MARKA ADI</th>
-            
-        </tr>
-    </thead>
-    <tr *ngFor="let brands of brand">
-          <td>{{brands.brandId}}</td>
-          <td>{{brands.brandName}}</td>
-         
-    </tr>
-</table>
+<ul *ngIf="dataLoaded == true" class="list-group">
+  <li routerLink="/car" class="list-group-item">Tüm Markalar</li>
+  <li
+    (click)="setCurrentColor(brands)"
+    routerLink="/car/brand/{{ brands.brandId }}"
+    *ngFor="let brands of brand"
+    [class]="getcurrentColorClass(brands)"
+  >
+    {{ brands.brandName }}
+  </li>
+</ul>
