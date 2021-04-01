@@ -14,11 +14,10 @@ import { CarImageService } from 'src/app/services/carImage-service/car-image.ser
 export class CarDetailsComponent implements OnInit {
   carDetails: car[] = [];
   carImages: CarImage[] = [];
+  carImage: CarImage;
   dataLoaded = false;
   cardetailssss: CarDetails[] = [];
   currentColor: CarImage;
-
-  carId: number;
 
   constructor(
     private carService: CarDetailsService,
@@ -28,9 +27,10 @@ export class CarDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params) => {
-      
-      this.getCarDetails();
-      this.getCarImagesByCarId(params['carId']);
+      if (params['carId']) {
+        this.getCarImagesByCarId(params['carId']);
+        this.getCarDetailsByCarId(params['carId']);
+      }
     });
   }
   getCarDetails() {
@@ -48,12 +48,17 @@ export class CarDetailsComponent implements OnInit {
   }
 
   getCarImagesByCarId(carid: number) {
-    this.carImageService.getByCarId(carid).subscribe((response) => {
+    this.carService.getByCarImagesId(carid).subscribe((response) => {
       this.carImages = response.data;
       this.dataLoaded = true;
     });
   }
-  
+  getCarDetailsByCarId(carId: number) {
+    this.carService.getByCarDetailsId(carId).subscribe((response) => {
+      this.carImage = response.data[0];
+    });
+  }
+
   setCurrentColor(carImage: CarImage) {
     this.currentColor = carImage;
   }

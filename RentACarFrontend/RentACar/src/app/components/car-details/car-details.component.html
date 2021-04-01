@@ -2,20 +2,18 @@
   <thead class="thead-dark">
     <tr>
       <th scope="col">ID</th>
-      <th scope="col">MODEL ADI</th>
-      <th scope="col">RENK ADI</th>
-      <th scope="col">MODEL YILI</th>
-      <th scope="col">FİYAT</th>
-      <th scope="col">AÇIKLAMA</th>
+      <th scope="col">ARAÇ NUMARASI</th>
+      <th scope="col">ARAÇ LİNKİ</th>
+      <th scope="col">TARİH</th>
+      
     </tr>
   </thead>
-  <tr *ngFor="let details of carDetails">
+  <tr *ngFor="let details of carImages">
     <td>{{ details.id }}</td>
-    <td>{{ details.brandName }}</td>
-    <td>{{ details.colorName }}</td>
-    <td>{{ details.modelYear }}</td>
-    <td>{{ details.dailyPrice }}</td>
-    <td>{{ details.description }}</td>
+    <td>{{ details.carId }}</td>
+    <td>{{ details.imagePath }}</td>
+    <td>{{ details.date }}</td>
+    
   </tr>
 </table>
 
