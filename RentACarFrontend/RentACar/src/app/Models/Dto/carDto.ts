@@ -1,4 +1,4 @@
-export interface car {
+export interface carDto {
   id: number;
   brandName: string;
   colorName: string;
@@ -8,5 +8,4 @@ export interface car {
   imagePath: string;
   brandId: number;
   colorId: number;
-  carId:number;
 }

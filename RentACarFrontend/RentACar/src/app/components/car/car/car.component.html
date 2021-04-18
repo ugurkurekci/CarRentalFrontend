@@ -1,0 +1,36 @@
+<app-filter-car></app-filter-car>
+
+<br />
+
+<label for="exampleFormControlInput1" class="form-label">Marka veya istediğiniz özellikte Arama yapabilirsiniz.</label>
+<input type="text" [(ngModel)]="filterText" class="form-control" id="filterText" placeholder="arama ifadesi giriniz" />
+<br />
+<div *ngIf="filterText" class="alert alert-success">
+  {{ filterText }} aradınız
+</div>
+
+
+
+
+
+
+<div class="card" style="width: 18rem;">
+
+  <div class="card-body">
+    <ul *ngFor="let car of car | filterCarPipe: filterText" routerLink="car/carfilter{{ car.brandId }}{{car.colorId}}"
+      class="list-group list-group-flush">
+      <li class="list-group-item">
+        <b style="font-size: 20px">Kiralamak istenilen aracın detay bilgileri</b>
+      </li>
+
+      <li class="list-group-item">Marka : {{ car.brandName |uppercase }}</li>
+      <li class="list-group-item">Renk : {{ car.colorName |uppercase }}</li>
+      <li class="list-group-item">Model : {{ car.modelYear }}</li>
+      <li class="list-group-item">Fiyat : {{ car.dailyPrice | currency:'TRY':"symbol-narrow" }}</li>
+      <li class="list-group-item">Açıklama : {{ car.description }}</li>
+      <button routerLink="/car/details/{{ car.id }}" type="button" class="btn btn-info">
+        Detay
+      </button>
+    </ul>
+  </div>
+</div>

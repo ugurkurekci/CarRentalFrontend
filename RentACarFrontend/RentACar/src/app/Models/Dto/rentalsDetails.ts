@@ -3,7 +3,7 @@ export interface rentalsDetails{
     brandName: string;
     firstName:string;
     lastName:string;
-    dailyPrice:string;
+    dailyPrice:number;
     rentDate:Date;
     returnDate:Date;
 }

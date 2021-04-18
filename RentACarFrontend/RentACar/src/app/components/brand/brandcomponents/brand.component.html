@@ -1,0 +1,29 @@
+<div class="my-4 d-flex">
+  <input
+    type="text"
+    [(ngModel)]="filterBrand"
+    class="form-control"
+    placeholder="Marka Ara"
+  />
+</div>
+
+<div *ngIf="dataLoaded == false" class="spinner-border text-info" role="status">
+  <span class="visually-hidden"></span>
+</div>
+
+<ul class="list-group">
+  <li [class]="getAllBrandsClass()" routerLink="/car">
+    Tüm Markalar</li>
+
+  <span
+    class="sidebar-grid"
+    *ngFor="let brands of brand | filterBrandPipe: filterBrand"
+  >
+    <li
+      [class]="getcurrentColorClass(brands)"
+      routerLink="/car/brand/{{ brands.brandId }}"
+    >
+      {{ brands.brandName }}
+    </li>
+  </span>
+</ul>

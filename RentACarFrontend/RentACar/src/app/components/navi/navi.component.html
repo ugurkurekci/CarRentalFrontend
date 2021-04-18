@@ -1,45 +1,37 @@
-<nav class="navbar navbar-expand-lg">
+<header class="header-area overlay">
+  <nav class="navbar navbar-expand-md navbar-dark">
   <div class="container">
-    <a class="navbar-brand light text-white" href="#"
-      ><i class="fa fa-graduation-cap fa-lg mr-2"></i>UĞUR KÜREKCİ</a
-    >
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#nvbCollapse"
-      aria-controls="nvbCollapse"
-    >
-      <span class="navbar-toggler-icon"></span>
+    <a href="#" class="navbar-brand">RentACar</a>
+    
+    <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#main-nav">
+      <span class="menu-icon-bar"></span>
+      <span class="menu-icon-bar"></span>
+      <span class="menu-icon-bar"></span>
     </button>
-    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+    
+    <div id="main-nav" class="collapse navbar-collapse">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item pl-1">
-          <a class="nav-link text-white" href="">Anasayfa</a>
-        </li>
-        <li class="nav-item pl-1">
-          <a class="nav-link text-white" href="">Hakkımızda</a>
-        </li>
-        <li class="nav-item pl-1">
-          <a class="nav-link text-white" href="1">İletişim</a>
-        </li>
-        <li class="nav-item pl-1">
-          <a class="nav-link text-white" href="1">Kayıt Ol</a>
-        </li>
-        <li class="nav-item pl-1">
-          <a class="nav-link text-white" href="1">Oturum Aç </a>
-        </li>
-        <li class="nav-item pl-4"></li>
-        <form class="form-inline">
-          <div class="md-form my-0">
-            <input
-              class="form-control mr-sm-2"
-              type="text"
-              placeholder="Search"
-              aria-label="Search"
-            />
+        <li><a href="car" class="nav-item nav-link active">Anasayfa</a></li>
+        
+        <li class="dropdown">
+          <a href="#" class="nav-item nav-link" data-toggle="dropdown">Marka & Renk</a>
+          <div class="dropdown-menu">
+            <a href="brand" class="dropdown-item">Marka</a>
+            <a href="colors" class="dropdown-item">Renk</a>
+            
           </div>
-        </form>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="nav-item nav-link" data-toggle="dropdown">Portfolio</a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item">Dropdown Item 1</a>
+            <a href="#" class="dropdown-item">Dropdown Item 2</a>
+            <a href="#" class="dropdown-item">Dropdown Item 3</a>
+            <a href="#" class="dropdown-item">Dropdown Item 4</a>
+            <a href="#" class="dropdown-item">Dropdown Item 5</a>
+          </div>
+        </li>
+        <li><a href="#" class="nav-item nav-link">İletişim</a></li>
       </ul>
     </div>
   </div>

@@ -1,0 +1,19 @@
+<div *ngFor="let carImage of carimages" class="card" style="width: 30rem">
+  <img src="https://localhost:5001/{{ carImage.imagePath }}" />
+  <div class="card-body">
+    <ul *ngFor="let car of car" class="list-group list-group-flush">
+      <li class="list-group-item">
+        <b style="font-size: xx-large">Kiralamak istenilen aracın detay bilgileri</b>
+      </li>
+
+      <li class="list-group-item">Marka : {{ car.brandName |uppercase }}</li>
+      <li class="list-group-item">Renk : {{ car.colorName |uppercase }}</li>
+      <li class="list-group-item">Model : {{ car.modelYear }}</li>
+      <li class="list-group-item">Fiyat : {{ car.dailyPrice | currency:'TRY':"symbol-narrow" }}</li>
+      <li class="list-group-item">Açıklama : {{ car.description }}</li>
+      <button routerLink="/rentalsdetail" type="button" class="btn btn-info">
+        Kirala
+      </button>
+    </ul>
+  </div>
+</div>
