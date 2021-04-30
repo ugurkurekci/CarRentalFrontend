@@ -71,7 +71,7 @@ export class RentacarComponent implements OnInit {
     this.rentalService.add(this.rental).subscribe(
       (data) => {
         this.paymentCheck = true;
-        this.toastrService.success(data.Message, 'Başarılı');
+        this.toastrService.success(data.message, 'Başarılı');
         this.router.navigate(['payment']);
       },
       (dataError) => {

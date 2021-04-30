@@ -4,6 +4,8 @@ import { Observable } from 'rxjs';
 import { carDto } from 'src/app/Models/Dto/carDto';
 import { car } from 'src/app/Models/Entities/car';
 import { ListResponseModel } from 'src/app/Models/listResponseModel';
+import { responseModel } from 'src/app/Models/responseModel';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -11,7 +13,7 @@ import { ListResponseModel } from 'src/app/Models/listResponseModel';
 export class CarService {
   apiUrl = 'https://localhost:5001/api/';
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(private httpClient: HttpClient) { }
 
   getCar(): Observable<ListResponseModel<car>> {
     let newPath: string = this.apiUrl + 'Car/GetCarDetails';
@@ -40,7 +42,13 @@ export class CarService {
       '&colorId=' +
       colorId;
     console.log(newPath);
-
     return this.httpClient.get<ListResponseModel<car>>(newPath);
   }
+
+  add(car:car):Observable<responseModel>{
+    let newPath= this.apiUrl+"Car/add";
+    return this.httpClient.post<responseModel>(newPath,car);
+  }
+
 }
+

@@ -6,11 +6,18 @@ import { CarComponent } from './components/car/car/car.component';
 import { ColorsComponent } from './components/color/colorscomponents/colors.component';
 import { RentalsdetailsComponent } from './components/rentalsdetails/rentalsdetails.component';
 import { RentacarComponent } from './components/rentacar/rentacar.component';
+import { ColorAddComponent } from './components/color/color-add/color-add.component';
+import { BrandAddComponent } from './components/brand/brand-add/brand-add.component';
+import { CarAddComponent } from './components/car/car-add/car-add.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: CarComponent },
   { path: 'colors', component: ColorsComponent },
   { path: 'brand', component: BrandComponent },
+  { path: 'color/add', component: ColorAddComponent },
+  { path: 'brand/add', component: BrandAddComponent },
+  { path: 'car/add', component: CarAddComponent },
+  
   { path: 'car', component: CarComponent },
   { path: 'rentals', component: RentalsdetailsComponent },
   { path: 'rentalsdetails', component: RentacarComponent },
@@ -26,7 +33,7 @@ const routes: Routes = [
   { path: 'car/:brandId/:colorId', component: CarComponent },
   { path: 'rent-car/:carId', component: RentacarComponent },
   { path: 'car/carfilter/:brandId/:colorId', component: CarComponent },
-  { path: 'car/add', component: CarComponent },
+  
 ];
 
 @NgModule({
