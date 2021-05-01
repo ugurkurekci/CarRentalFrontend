@@ -1,0 +1,29 @@
+<div class="content">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="tittle">Renk Silme Panel</h5>
+            </div>
+            <div class="card-body">
+                <form [formGroup]="ColorDeleteGroup">
+
+                    <div class="mb-3">
+                        <label for="colorId"> Renk NO</label>
+                        <div class="form-group">
+                            <input type="number" id="colorId" formControlName="colorId" class="form-control"
+                                placeholder="Renk Id" />
+                        </div>
+                    </div>
+
+                   
+                </form>
+            </div>
+
+            <div class="card-footer">
+                <button class="btn btn-danger" (click)="Delete()">Sil</button>
+
+
+            </div>
+        </div>
+    </div>
+</div>

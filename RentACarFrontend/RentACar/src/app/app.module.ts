@@ -22,6 +22,10 @@ import { FilterCarComponent } from './components/car/filtercar/filter-car/filter
 import { ColorAddComponent } from './components/color/color-add/color-add.component';
 import { BrandAddComponent } from './components/brand/brand-add/brand-add.component';
 import { CarAddComponent } from './components/car/car-add/car-add.component';
+import { BrandUpdateComponent } from './components/brand/brand-update/brand-update.component';
+import { BrandDeleteComponent } from './components/brand/brand-delete/brand-delete.component';
+import { ColorUpdateComponent } from './components/color/color-update/color-update.component';
+import { ColorDeleteComponent } from './components/color/color-delete/color-delete.component';
 
 
 @NgModule({
@@ -47,6 +51,14 @@ import { CarAddComponent } from './components/car/car-add/car-add.component';
     BrandAddComponent,
     
     CarAddComponent,
+    
+    BrandUpdateComponent,
+    
+    BrandDeleteComponent,
+    
+    ColorUpdateComponent,
+    
+    ColorDeleteComponent,
     
   ],
   imports: [
