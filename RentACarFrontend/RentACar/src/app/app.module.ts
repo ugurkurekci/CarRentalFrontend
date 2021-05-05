@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NaviComponent } from './components/navi/navi.component';
@@ -26,6 +26,11 @@ import { BrandUpdateComponent } from './components/brand/brand-update/brand-upda
 import { BrandDeleteComponent } from './components/brand/brand-delete/brand-delete.component';
 import { ColorUpdateComponent } from './components/color/color-update/color-update.component';
 import { ColorDeleteComponent } from './components/color/color-delete/color-delete.component';
+import { FooterComponent } from './components/footer/footer/footer.component';
+import { LoginComponent } from './components/login/login/login.component';
+import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { RegisterComponent } from './components/register/register/register.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 
 @NgModule({
@@ -42,24 +47,32 @@ import { ColorDeleteComponent } from './components/color/color-delete/color-dele
     FilterBrandPipePipe,
     FilterColorPipePipe,
     FilterCarPipePipe,
-    
+
     RentacarComponent,
     FilterCarComponent,
-    
+
     ColorAddComponent,
-    
+
     BrandAddComponent,
-    
+
     CarAddComponent,
-    
+
     BrandUpdateComponent,
-    
+
     BrandDeleteComponent,
-    
+
     ColorUpdateComponent,
-    
+
     ColorDeleteComponent,
-    
+
+    FooterComponent,
+
+    LoginComponent,
+
+    RegisterComponent,
+
+    ContactComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -72,7 +85,11 @@ import { ColorDeleteComponent } from './components/color/color-delete/color-dele
       positionClass: 'toast-bottom-right',
     }),
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true
+    }
+  ],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

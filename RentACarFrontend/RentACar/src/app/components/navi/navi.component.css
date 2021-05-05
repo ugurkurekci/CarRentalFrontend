@@ -25,7 +25,7 @@ p {
 }
 .button-primary {
   position: relative;
-  background-color: #c0ca33;
+  background-color: blue;
   color: red;
   font-size: 1.8rem;
   font-weight: 700;
@@ -43,7 +43,7 @@ p {
   left: 0;
   right: 0;
   top: 0;
-  background-color:red;
+  background-color:green;
   border-radius: 4px;
   opacity: 0;
   -webkit-transform: scaleX(0.8);
@@ -70,7 +70,7 @@ p {
 .header-area {
   position: relative;
   height: 8vh;
-  background:turquoise;
+  background:cornflowerblue;
   background-attachment: fixed;
   background-position: center center;
   background-repeat: no-repear;
@@ -159,12 +159,12 @@ p {
 }
 .navbar .dropdown-menu {
   padding: 0;
-  background-color: rgba(0, 0, 0, .9);
+  background-color: white(0, 0, 0, .9);
 }
 .navbar .dropdown-menu .dropdown-item {
   position: relative;
   padding: 10px 20px;
-  color: #fff;
+  color: black;
   font-size: 1.4rem;
   border-bottom: 1px solid rgba(255, 255, 255, .1);
   transition: color 0.2s ease-in;
@@ -174,7 +174,7 @@ p {
 }
 .navbar .dropdown-menu .dropdown-item:hover {
   background: transparent;
-  color: #c0ca33;
+  color:mediumaquamarine;
 }
 .navbar .dropdown-menu .dropdown-item::before {
   content: '';
@@ -183,7 +183,7 @@ p {
   left: 0;
   top: 0;
   width: 5px;
-  background-color: #c0ca33;
+  background-color:mediumaquamarine;
   opacity: 0;
   transition: opacity 0.2s ease-in;
 }
@@ -211,7 +211,7 @@ p {
   }
   .navbar-nav {
     padding: 0 20px;
-    background-color: rgba(0, 0, 0, .9);
+    background-color: rgba(0, 0, 0, .3);
   }
   .navbar.fixed-top .navbar-nav {
     background: transparent;
@@ -237,7 +237,7 @@ p {
     left: 30%;
     right: 30%;
     height: 1px;
-    background-color: red;
+    background-color: white;
     -webkit-transform: scaleX(0);
     -ms-transform: scaleX(0);
     transform: scaleX(0);

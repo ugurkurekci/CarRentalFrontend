@@ -13,25 +13,34 @@ import { BrandUpdateComponent } from './components/brand/brand-update/brand-upda
 import { BrandDeleteComponent } from './components/brand/brand-delete/brand-delete.component';
 import { ColorUpdateComponent } from './components/color/color-update/color-update.component';
 import { ColorDeleteComponent } from './components/color/color-delete/color-delete.component';
+import { LoginComponent } from './components/login/login/login.component';
+import { LoginGuard } from './guards/login.guard';
+import { RegisterComponent } from './components/register/register/register.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: CarComponent },
   
   { path: 'colors', component: ColorsComponent },
-  { path: 'color/add', component: ColorAddComponent },
-  { path: 'color/update', component: ColorUpdateComponent },
-  { path: 'color/delete', component: ColorDeleteComponent },
+  { path: 'color/add', component: ColorAddComponent,canActivate:[LoginGuard] },
+  { path: 'color/update', component: ColorUpdateComponent,canActivate:[LoginGuard] },
+  { path: 'color/delete', component: ColorDeleteComponent,canActivate:[LoginGuard] },
 
   { path: 'brand', component: BrandComponent },
-  { path: 'brand/add', component: BrandAddComponent },
-  { path: 'brand/update', component: BrandUpdateComponent },
-  { path: 'brand/delete', component: BrandDeleteComponent },
+  { path: 'brand/add', component: BrandAddComponent,canActivate:[LoginGuard] },
+  { path: 'brand/update', component: BrandUpdateComponent,canActivate:[LoginGuard] },
+  { path: 'brand/delete', component: BrandDeleteComponent,canActivate:[LoginGuard] },
 
-  { path: 'car/add', component: CarAddComponent },
+  { path: 'car/add', component: CarAddComponent,canActivate:[LoginGuard] },
   { path: 'car', component: CarComponent },
+
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
 
   { path: 'rentals', component: RentalsdetailsComponent },
   { path: 'rentalsdetails', component: RentacarComponent },
+  { path: 'contact', component: ContactComponent },
+
 
   { path: 'car/brand/:brandId', component: CarComponent },
   { path: 'car/brand/:carId', component: CarComponent },

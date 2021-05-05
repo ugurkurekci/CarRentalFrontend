@@ -1,18 +1,16 @@
-<div class="row">
-  <div class="col-md-12"><app-navi></app-navi><br /></div>
-</div>
-
-<div class="container-fluid">
+<app-navi></app-navi>
+<div class="container">
   <div class="row">
     <div class="col-md-2">
-      <div class="col-md-9"><app-brand></app-brand><br /></div>
-      <div class="col-md-9"><app-colors></app-colors><br /></div>
-    </div>
+      <app-brand></app-brand>
+      <app-colors></app-colors>
 
+    </div>
     <div class="col-md-10">
-      <div class="container">
-        <router-outlet></router-outlet>
-      </div>
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>
+<footer class="my-5 pt-5 text-muted text-center text-small">
+  <p class="mb-1">© 2021 ReCap Car Rental Tüm hakları saklıdır.</p>
+</footer>
